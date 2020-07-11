@@ -122,6 +122,8 @@ sf_activos_cantones_ultima_fecha <-
 
 #---------------------- Datos recuperados -----------------
 
+# Datos de comparación con respecto al día anterior tomados del archivo excel (Excel - General. xlsx) de la página de mpas interactivo del Ministerio de Salud, publicada en: http://geovision.uned.ac.cr/oges/ 
+
 # Data frame de casos recuperados por cantón
 df_recuperados_cantones_ancho <- read.csv(archivo_recuperados_cantones, sep = caracter_separador)
 df_recuperados_cantones <- df_recuperados_cantones_ancho %>%
@@ -296,7 +298,7 @@ Row
 -----------------------------------------------------------------------
 ### Casos positivos {.value-box}
 ```{r}
-valueBox(value = paste(format(df_general_pais_ultima_fecha$positivos, big.mark = ","), "", sep = " "), 
+valueBox(value = paste(format(df_general_pais_ultima_fecha$positivos, big.mark = ","), "", sep = "", ("(+270)")), 
          caption = "Total de casos positivos", 
          icon = icono_positivos, 
          color = color_positivos)
@@ -306,7 +308,7 @@ valueBox(value = paste(format(df_general_pais_ultima_fecha$positivos, big.mark =
 ```{r}
 valueBox(value = paste(format(df_general_pais_ultima_fecha$muj_posi, big.mark = ","), " (",
                        round(100 * df_general_pais_ultima_fecha$muj_posi / df_general_pais_ultima_fecha$positivos, 1), 
-                       "%)", sep = ""), 
+                       "%)", sep = "", ("(+97)")),
          caption = "Total de mujeres",
          icon = icono_mujeres, 
          color = color_positivos
@@ -317,7 +319,7 @@ valueBox(value = paste(format(df_general_pais_ultima_fecha$muj_posi, big.mark = 
 ```{r}
 valueBox(value = paste(format(df_general_pais_ultima_fecha$hom_posi, big.mark = ","), " (",
                        round(100 * df_general_pais_ultima_fecha$hom_posi / df_general_pais_ultima_fecha$positivos, 1), 
-                       "%)", sep = ""), 
+                       "%)", sep = "", ("(+173)")), 
          caption = "Total de hombres",
          icon = icono_hombres, 
          color = color_positivos
@@ -330,7 +332,7 @@ Row
 ```{r}
 valueBox(value = paste(format(df_general_pais_ultima_fecha$menor_posi, big.mark = ","), " (",
                        round(100 * df_general_pais_ultima_fecha$menor_posi / df_general_pais_ultima_fecha$positivos, 1), 
-                       "%)", sep = ""), 
+                       "%)", sep = "", ("(+40)")), 
          caption = "Total de menores de edad",
          icon = icono_menor, 
          color = color_positivos)
@@ -339,7 +341,7 @@ valueBox(value = paste(format(df_general_pais_ultima_fecha$menor_posi, big.mark 
 ### Casos adultos {.value-box}
 ```{r}
 valueBox(value = paste(format(df_general_pais_ultima_fecha$adul_posi, big.mark = ","), "(",                          round(100 * df_general_pais_ultima_fecha$adul_posi / df_general_pais_ultima_fecha$positivos, 1), 
-                       "%)", sep = ""), 
+                       "%)", sep = "", ("(+220)")), 
          caption = "Total de adultos", 
          icon = icono_adulto,
          color = color_positivos)
@@ -348,7 +350,7 @@ valueBox(value = paste(format(df_general_pais_ultima_fecha$adul_posi, big.mark =
 ### Casos adultos mayores {.value-box}
 ```{r}
 valueBox(value = paste(format(df_general_pais_ultima_fecha$am_posi, big.mark = ","), "(",                          round(100 * df_general_pais_ultima_fecha$am_posi / df_general_pais_ultima_fecha$positivos, 1), 
-                       "%)", sep = ""), 
+                       "%)", sep = "", ("(+9)")), 
          caption = "Total de adultos mayores", 
          icon = icono_adultom,
          color = color_positivos)
