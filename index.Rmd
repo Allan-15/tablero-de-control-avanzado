@@ -401,7 +401,7 @@ Row
 -----------------------------------------------------------------------
 ### Casos activos {.value-box}
 ```{r}
-valueBox(value = paste(format(df_general_pais_ultima_fecha$activos, big.mark = ","), "", sep = " "), 
+valueBox(value = paste(format(df_general_pais_ultima_fecha$activos, big.mark = ","), "", sep = "", ("(+196)")), 
          caption = "Total de casos activos", 
          icon = icono_activos, 
          color = color_activos
@@ -412,7 +412,7 @@ valueBox(value = paste(format(df_general_pais_ultima_fecha$activos, big.mark = "
 ```{r}
 valueBox(value = paste(format(df_general_pais_ultima_fecha$muj_acti, big.mark = ","), " (",
                        round(100 * df_general_pais_ultima_fecha$muj_acti / df_general_pais_ultima_fecha$activos, 1), 
-                       "%)", sep = ""), 
+                       "%)", sep = "", ("(+81)")), 
          caption = "Total de mujeres",
          icon = icono_mujeres, 
          color = color_activos
@@ -423,7 +423,7 @@ valueBox(value = paste(format(df_general_pais_ultima_fecha$muj_acti, big.mark = 
 ```{r}
 valueBox(value = paste(format(df_general_pais_ultima_fecha$hom_acti, big.mark = ","), " (",
                        round(100 * df_general_pais_ultima_fecha$hom_acti / df_general_pais_ultima_fecha$activos, 1), 
-                       "%)", sep = ""), 
+                       "%)", sep = "", ("(+115)")), 
          caption = "Total de hombres",
          icon = icono_hombres, 
          color = color_activos
@@ -436,7 +436,7 @@ Row
 ```{r}
 valueBox(value = paste(format(df_general_pais_ultima_fecha$menor_acti, big.mark = ","), " (",
                        round(100 * df_general_pais_ultima_fecha$menor_acti / df_general_pais_ultima_fecha$activos, 1), 
-                       "%)", sep = ""), 
+                       "%)", sep = "", ("(+29)")), 
          caption = "Total de menores de edad",
          icon = icono_menor, 
          color = color_activos
@@ -446,7 +446,7 @@ valueBox(value = paste(format(df_general_pais_ultima_fecha$menor_acti, big.mark 
 ### Casos adultos {.value-box}
 ```{r}
 valueBox(value = paste(format(df_general_pais_ultima_fecha$adul_acti, big.mark = ","), "(",                          round(100 * df_general_pais_ultima_fecha$adul_acti / df_general_pais_ultima_fecha$activos, 1), 
-                       "%)", sep = ""), 
+                       "%)", sep = "", ("(+189)")), 
          caption = "Total de Adultos", 
          icon = icono_adulto,
          color = color_activos
@@ -456,7 +456,7 @@ valueBox(value = paste(format(df_general_pais_ultima_fecha$adul_acti, big.mark =
 ### Casos adultos mayores
 ```{r}
 valueBox(value = paste(format(df_general_pais_ultima_fecha$am_acti, big.mark = ","), "(",                          round(100 * df_general_pais_ultima_fecha$am_acti / df_general_pais_ultima_fecha$activos, 1), 
-                       "%)", sep = ""), 
+                       "%)", sep = "", ("(+8)")), 
          caption = "Total de Adultos Mayores", 
          icon = icono_adultom,
          color = color_activos
