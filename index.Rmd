@@ -658,7 +658,7 @@ valueBox(value = paste(format(df_general_pais_ultima_fecha$menor_fall, big.mark 
 ### Casos adultos {.value-box}
 ```{r}
 valueBox(value = paste(format(df_general_pais_ultima_fecha$adul_fall, big.mark = ","), "(",                          round(100 * df_general_pais_ultima_fecha$adul_fall/ df_general_pais_ultima_fecha$fallecidos, 1), 
-                       "%)", sep = "", ("(+8)")), 
+                       "%)", sep = "", ("(+0)")), 
          caption = "Total de Adultos", 
          icon = icono_adulto,
          color = color_fallecidos
